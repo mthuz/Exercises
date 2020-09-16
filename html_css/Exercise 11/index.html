@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và các điều khiển trên form</title>
+    <style>
+        h2{
+            /* text-align: center; */
+            color: orange;
+        }
+
+        table{
+            border-collapse: collapse;
+            background-color: lightblue;
+        }
+
+        tr td{
+            border: 2px solid black;
+        }
+
+        table tr:last-child{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Đăng nhập</h2>
+    <form action="">
+        <table>
+            <tr>
+                <td>Mã người dùng</td>
+                <td><input type="text" name="user" id="user"></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" name="pass" id="pass"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Đăng nhập"></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
