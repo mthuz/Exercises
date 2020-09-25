@@ -120,7 +120,7 @@ function checkAllOdd(c) {
     }
     check ? console.log("Yes") : console.log("No")
 }
-checkAllOdd(13132)
+checkAllOdd(13131313131)
 console.log("")
 
 // 9. Viết chương trình kiểm tra số n có phải là số đối xứng
@@ -156,5 +156,4 @@ for (var i = 2; i < 10; i++) {
         console.log(i + "x" + j + "=" + i * j)
     }
 }
-
-
+console.log("")
