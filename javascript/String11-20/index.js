@@ -10,7 +10,7 @@ function countSpace(str) {
     }
     return count
 }
-console.log("Số khoảng trắng: ",countSpace("123 ANC "))
+console.log("Số khoảng trắng: ", countSpace("123 ANC "))
 console.log("")
 
 //12. Hãy remove tất cả khoảng trắng, space và 'enter' trong một chuỗi
@@ -36,16 +36,16 @@ function reverseStr(str) {
     }
     return strReverse
 }
-console.log(reverseStr("Dao Nguoc"))
+console.log(reverseStr("This is a beautiful day"))
 console.log("")
 
 //14. Nhập vào chuỗi s1 và s2, cho biết vị trí xuất hiện của chuỗi s2 trong s1
 console.log("Bài 14: Nhập vào chuỗi s1 và s2, cho biết vị trí xuất hiện của chuỗi s2 trong s1")
-function func(s1, s2){
+function func(s1, s2) {
     var i = s1.search(s2)
     return i
 }
-console.log(func("This is a beautiful day","is"))
+console.log(func("This is a beautiful day", "is"))
 console.log("")
 
 //15. Viết chương trình chuẩn hóa họ tên
@@ -59,13 +59,26 @@ function standardName(str) {
     }
     return newStr
 }
+
+// Cách 2
+function func2(name) {
+    var result = ""
+    for (var i = 0; i < name.length; i++) {
+        if (i === 0 || name[i - 1] === " ") {
+            result += name[i].toUpperCase()
+        } else {
+            result += name[i].toLowerCase()
+        }
+    }
+    return result
+}
 console.log(standardName("NguyeN THI tho tHu hA"))
 console.log("")
 
 //16. Viết chương trình lấy id name của fb
 console.log("Bài 16: Chương trình lấy id name của fb")
 function getIdName(str) {
-    var idName = str.slice(str.lastIndexOf("/")+1)
+    var idName = str.slice(str.lastIndexOf("/") + 1)
     return idName
 }
 console.log(getIdName("https://www.facebook.com/ngothucdat"))
@@ -95,13 +108,13 @@ console.log("")
 //18. Viết hàm tìm vị trí xâu X tồn tại kề cuối trong xâu Y
 console.log("Bài 18: Tìm vị trí xâu X tồn tại kề cuối trong xâu Y")
 function findPosition(s1, s2) {
-   var i = s1.lastIndexOf(s2)
-   if(i < 0){
-       return -1
-   }else{
-       s1 = s1.slice(0, i)
-       return s1.lastIndexOf(s2)
-   }
+    var i = s1.lastIndexOf(s2)
+    if (i < 0) {
+        return -1
+    } else {
+        s1 = s1.slice(0, i)
+        return s1.lastIndexOf(s2)
+    }
 }
 console.log(findPosition("This is a beautiful day, is it?", "is"))
 console.log("")
@@ -119,4 +132,6 @@ console.log(sumRecursive(9))
 console.log("")
 
 //20. [Ignore] Viết 1 hàm chuẩn hóa so sánh của một string, và trả về Xâu chuẩn. Xâu chuẩn là sâu không tồn tại các dấu cách(space) và tab and enter trong value(value là giá trị trong "{value}")
-
+function chuanHoa(a){
+    
+}

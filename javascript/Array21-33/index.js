@@ -261,29 +261,21 @@ console.log("")
 // VD: a = [1,2,3,4,5,6,7,8,9,9,9,8,7,6,5,4,3,2,1]; k = 30 .Output: NO
 console.log("Bài 31")
 function sumThreeNumber(a, k) {
-    var sum = 0
-    var b = []
     for (var i = 0; i < a.length - 2; i++) {
         for (var j = i + 1; j < a.length - 1; j++) {
             for (var s = j + 1; s < a.length; s++) {
-                sum = a[i] + a[j] + a[s]
-                b.push(sum)
+                if ((a[i] + a[j] + a[s]) === k) {
+                    return "YES"
+                }
+
             }
         }
     }
-    if (b.includes(k) === true) {
-        return 1
-    } else {
-        return 0
-    }
+    return "NO"
 }
 var a2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 console.log(a2)
-if (sumThreeNumber(a2, 26) === 1) {
-    console.log("YES")
-} else {
-    console.log("NO")
-}
+console.log(sumThreeNumber(a2, 30))
 console.log("")
 
 // 32. Cho một mảng là một tập các số nguyên dương theo thứ tự tăng dần, và một số k. Hãy chèn k vào mảng và đảm bảo mảng ko mất tính tăng dần
