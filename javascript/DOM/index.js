@@ -78,7 +78,7 @@ btnReset.addEventListener("click", function () {
 
 function startTime() {
     miliSeconds++
-    if (miliSeconds < 9) {
+    if (miliSeconds < 10) {
         changeMiliSecond.innerHTML = "0" + miliSeconds
     }
     if (miliSeconds > 9) {
@@ -90,14 +90,24 @@ function startTime() {
         miliSeconds = 0
         changeMiliSecond.innerHTML = "0" + 0
     }
+    if (second < 10) {
+        changeSecond.innerHTML = "0" +seconds
+    }
+
     if (seconds > 9) {
         changeSecond.innerHTML = seconds
     }
+
     if (seconds > 59) {
         minutes++
         changeMinute.innerHTML = "0" + minutes
         seconds = 0
         changeSecond.innerHTML = "0" + 0
     }
+
+     if(minutes > 9){
+         changeMinute.innerHTML = minutes
+     }
 }
+
 

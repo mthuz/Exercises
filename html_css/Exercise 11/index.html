@@ -19,8 +19,12 @@
             border: 2px solid black;
         }
 
-        table tr:last-child{
+        table tr:nth-of-type(3){
             text-align: center;
+        }
+
+        table tr:last-child{
+            display: none;
         }
     </style>
 </head>
@@ -37,7 +41,7 @@
                 <td><input type="password" name="pass" id="pass"></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value="Đăng nhập"></td>
+                <td colspan="2"><button onclick="">Đăng nhập</button></td>
             </tr>
             <tr>
                 <td colspan="2"></td>
